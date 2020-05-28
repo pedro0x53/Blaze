@@ -1,0 +1,27 @@
+@media only screen and (max-width: 770px) {
+	.hide-on-med-and-down {
+		display: none;
+	}
+
+	.show-on-med-and-down {
+		display: block;
+	}
+
+	.modal {
+		width: 100%;
+	}
+
+	#cursor {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 770px) {
+	.hide-on-med-and-down {
+		display: block;
+	}
+
+	.show-on-med-and-down {
+		display: none;
+	}
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blaze</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+	<script src="https://kit.fontawesome.com/fe0c633f2c.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div class="layer" id="menu">
+		<nav>
+			<div class="header">
+				<div class="logo">
+					<a href="#" class="blaze">Blaze</a>
+				</div>
+				<div class="divider"></div>
+			</div>
+			<section>
+				<h2>Your Library</h2>
+				<ul>
+					<a href="#"><li>Recently Played</li></a>
+					<a href="#"><li>Albums</li></a>
+					<a href="#"><li>Artist</li></a>
+					<a href="#"><li>Liked Songs</li></a>
+				</ul>
+			</section>
+			<section>
+				<h2>Playlists</h2>
+				<ul>
+					<a href="#"><li>Breathe Out</li></a>
+					<a href="#"><li>Sturday Night</li></a>
+					<a href="#"><li>Pop Hits</li></a>
+					<a href="#"><li>mint BR</li></a>
+				</ul>
+			</section>
+		</nav>
+		<div class="overlay trigger" target="menu"></div>
+	</div>
+
+	<div class="container">
+		<header class="menu">
+			<button class="btn menu-btn embossed trigger" target="menu"><i class="fas fa-bars"></i></button>
+			<button class="btn config embossed trigger" target="configurations"><i class="fas fa-cog"></i></button>
+		</header>
+		<div class="main row">
+			<div class="hide-on-med-and-down">
+				<button class="btn like embossed"><i class="far fa-heart"></i></button>
+			</div>
+			<div class="col">
+				<div class="cover embossed row">
+					<div class="image">
+						<img src="img/cover.png">
+					</div>
+				</div>
+				<div class="caption">
+					<p class="music">Blinding Lights</p>
+					<p class="artist">The Weeknd</p>
+				</div>
+			</div>
+			<div class="hide-on-med-and-down">
+				<button class="btn share embossed hide-on-med-and-down trigger" target="share"><i class="fas fa-share-alt"></i></button>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="progress-bar">
+				<div class="slider-container">
+					<input type="range" min="0" max="1000" value="300" class="slider" id="progress">
+				</div>
+			</div>
+			<div class="hide-on-med-and-down">
+				<div class="utils row">
+					<img src="img/cover.png">
+					<div class="description">
+						<p class="music">Blinding Lights</p>
+						<p class="artist">The Weeknd</p>
+					</div>
+				</div>
+			</div>
+			<div class="utils show-on-med-and-down">
+				<button class="btn like"><i class="far fa-heart"></i></button>
+			</div>
+			<div class="player row">
+				<button class="btn random active"><i class="fas fa-random"></i></button>
+				<button class="btn previous"><i class="fas fa-backward"></i></button>
+				<button class="btn play" id="playPause"><i class="fas fa-pause"></i></button>
+				<button class="btn next"><i class="fas fa-forward"></i></button>
+				<button class="btn repeat"><i class="fas fa-redo-alt"></i></button>
+			</div>
+			<div class="hide-on-med-and-down">
+				<div class="utils row">
+					<div class="volume row">
+						<button class="btn sound"><i class="fas fa-volume-up"></i></button>
+						<div class="slider-container row">
+							<input type="range" min="0" max="1000" value="700" class="slider" id="volume">
+						</div>
+					</div>
+					<button class="btn queue"><i class="fas fa-th-list"></i></button>
+				</div>
+			</div>
+			<div class="utils show-on-med-and-down">
+				<button class="btn queue"><i class="fas fa-th-list"></i></button>
+			</div>
+		</div>
+	</div>
+
+	<div class="layer" id="configurations">
+		<div class="modal">
+			<div class="content scrollable">
+				<header>
+					<h2>Settings</h2>
+					<p>Manage your preferences</p>
+				</header>
+				<section class="row">
+					<div class="description">
+						<h2>Stream Quality</h2>
+						<p>Adjust the quality for streaming songs</p>
+					</div>
+					<div class="component" id="quality">
+						<div class="combobox">
+							<select>
+								<option>Automatic</option>
+								<option>Low</option>
+								<option>Normal</option>
+								<option>High</option>
+								<option>Very High</option>
+							</select>
+						</div>
+					</div>
+				</section>
+				<section class="row">
+					<div class="description">
+						<h2>Volume Level</h2>
+						<p>Adjust volume for you enviroment</p>
+					</div>
+					<div class="component" id="vol-level">
+						<div class="combobox">
+							<select>
+								<option>Normal</option>
+								<option>Loud</option>
+								<option>Quiet</option>
+							</select>
+						</div>
+					</div>
+				</section>
+				<section class="row">
+					<div class="description">
+						<h2>Normalize Volume</h2>
+						<p>Set the same volume level for all songs</p>
+					</div>
+					<div class="component" id="normalize-vol">
+						<div class="switch">
+							<input type="checkbox" name="" checked>
+							<span class="lever"></span>
+						</div>
+					</div>
+				</section>
+				<section class="row">
+					<div class="description">
+						<h2>Autoplay</h2>
+						<p>Autoplay similar songs when your music ends</p>
+					</div>
+					<div class="component" id="autoplay">
+						<div class="switch">
+							<input type="checkbox" name="">
+							<span class="lever"></span>
+						</div>
+					</div>
+				</section>
+				<section class="row">
+					<div class="description">
+						<h2>Language</h2>
+						<p>Choose language</p>
+					</div>
+					<div class="component" id="language">
+						<div class="combobox">
+							<select>
+								<option>English</option>
+								<option>Français</option>
+								<option>Português</option>
+							</select>
+						</div>
+					</div>
+				</section>
+				<footer>
+					<p>Copyright &copy; <span id="year"></span> <a href="#" class="blaze">Blaze</a></p>
+				</footer>
+			</div>
+		</div>
+		<div class="overlay" target="configurations"></div>
+	</div>
+
+	<div class="layer" id="share">
+		<div class="popup">
+			<div class="content scrollable">
+				<section>
+					<i class="fas fa-link"></i>
+					<p class="sharableLink">blaze.com/track/DaOYJfI7P6nZ</p>
+				</section>
+			</div>
+		</div>
+		<div class="overlay" target="share"></div>
+	</div>
+
+	<span id="cursor"></span>
+
+</body>
+</html>
